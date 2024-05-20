@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>outside</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script>
+        let videoBtn=document.querySelectorAll('.vid-btn');
+ideoBtn.forEach(btn=>{
+   btn.addEventlistner('click',()=>{
+
+    document.querySelector('.controls .active').classList.remove('active');
+    btn.classList.add('active');
+    let src=btn.getAttribute('data-src');
+    document.querySelector('#video-slider').src = src;
+   });
+});
+    </script>
+</head>
+<body>
+   <section class="home" id="home">
+<div class="content">
+    <h3>adventure is worthwhile</h3>
+    <p>discover new places with us,adventure awaits</p>
+    <button class="cta-button">Discover More</button>
+</div>
+<div class="controls">
+    <span class="vid-btn active" data-src="video/sea.mp4"></span>
+    <span class="vid-btn" data-src="video/flower.mp4"></span>
+    <span class="vid-btn" data-src="video/girls in sea.mp4"></span>
+    <span class="vid-btn" data-src="video/girls walking.mp4"></span>
+
+</div>
+    
+
+<div class="video-container">
+    <video src="video/sea.mp4" id="video-slider" loop autoplay muted></video>
+
+</div>
+
+
+</div>
+</div>
+   </section> 
+   
+</body>
+</html>
